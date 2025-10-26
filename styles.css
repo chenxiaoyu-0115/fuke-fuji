@@ -1,0 +1,622 @@
+/* styles.css */
+
+/* ===== 基本設定 ===== */
+/* 1) 默认隐藏抽屉，避免桌面端显示成列表 */
+.drawer { display: none; }
+/* 2) 仅在手机宽度启用抽屉样式（你已有的样式，保留/补充 display:block） */
+@media (max-width:820px){
+  .drawer{
+    display: block;           /* ← 新增这一句 */
+    position: fixed; inset: 0 0 0 auto;
+    width: min(82vw, 360px);
+    background: white; border-left: 1px solid var(--line);
+    box-shadow: var(--shadow);
+    transform: translateX(100%); transition: transform .3s ease; padding: 18px;
+  }
+  .drawer.open{ transform: none; }
+  .drawer ul{ display:flex; flex-direction:column; gap:10px; list-style:none; padding:0; margin:20px 0 0; }
+  .drawer a{ padding:10px 12px; border-radius:10px; background:#f4f4f5; }
+}
+
+
+:root{
+  --bg:#faf9f7;
+  --paper:#ffffff;
+  --ink:#262626;
+  --muted:#6b7280;
+  --brand:#7c3aed;   /* 藤（紫） */
+  --accent:#b45309;  /* 稲穂（琥珀） */
+  --line:#e5e7eb;
+  --shadow:0 10px 25px rgba(0,0,0,.08);
+  --radius:18px;
+  --space:clamp(14px,1.6vw,20px);
+  --max:1200px;
+}
+
+html,body{height:100%;}
+body{
+  margin:0; font-family:-apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", Meiryo, system-ui, sans-serif;
+  color:var(--ink); background:var(--bg); line-height:1.7; letter-spacing:.02em;
+}
+a{color:inherit; text-decoration:none}
+img{max-width:100%; display:block}
+.container{width:100%; max-width:var(--max); margin:0 auto; padding:0 var(--space);}
+.card{background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow)}
+.input,.textarea{width:100%; padding:10px; border:1px solid var(--line); border-radius:10px}
+
+/* ===== ナビ（上固定） ===== */
+header.nav{
+  position:sticky; top:0; z-index:50; backdrop-filter:saturate(180%) blur(10px);
+  background:rgba(255,255,255,.85); border-bottom:1px solid var(--line);
+}
+.nav-inner{display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px var(--space);}
+.brand{display:flex; align-items:center; gap:10px; font-weight:700;}
+.brand .dot{width:10px; height:10px; border-radius:999px; background:linear-gradient(135deg,var(--brand),var(--accent));}
+nav ul{display:flex; gap:18px; list-style:none; padding:0; margin:0;}
+nav a{padding:6px 10px; border-radius:10px; font-weight:600; color:#3f3f46}
+nav a:hover{background:#f4f4f5}
+.menu-btn{display:none}
+
+/* ===== ヒーロー（フルスクリーン） ===== */
+.hero{min-height:60vh; display:grid; place-items:center; position:relative; overflow:hidden;}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+   /* ✅ 正确路径写法，图片与 index.html 同级目录下的 image 文件夹内 */
+  background: url('image/21.jpg') center/cover no-repeat;
+  filter: brightness(0.65);
+}
+
+
+
+}
+.hero::after{
+  content:""; position:absolute; inset:-30% -20% auto -20%; height:65%;
+  background:radial-gradient(60% 50% at 40% 50%, rgba(124,58,237,.35), transparent 70%);
+}
+.hero-content{position:relative; z-index:1; text-align:center; color:white; padding:40px var(--space);}
+.hero h1{font-size:clamp(28px,5vw,52px); line-height:1.2; margin:0 0 10px}
+.hero p{max-width:720px; margin:0 auto 20px; color:#eef2ff}
+.cta{display:inline-block; padding:12px 18px; border-radius:14px; font-weight:700; background:linear-gradient(135deg,var(--brand),var(--accent)); color:white; box-shadow:var(--shadow)}
+
+/* ===== セクション共通 ===== */
+section{padding:60px 0}
+.section-title{font-size:clamp(20px,3.5vw,28px); font-weight:800; margin:0 0 18px}
+.section-lead{color:var(--muted); margin:0 0 28px}
+
+/* ===== 2カラム：比較 ===== */
+.grid-2{display:grid; grid-template-columns:1fr 1fr; gap:24px}
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.card.roomy {
+  padding: 24px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.festival{padding:20px}
+.festival h3{margin:0 0 6px; font-size:20px}
+.festival .tag{font-weight:700; font-size:12px; letter-spacing:.08em; display:inline-block; padding:4px 8px; border-radius:999px; margin-bottom:10px}
+.fuji .tag{background:rgba(124,58,237,.1); color:var(--brand)}
+.niiname .tag{background:rgba(180,83,9,.12); color:var(--accent)}
+
+/* ===== 比較表 ===== */
+.table{width:100%; border-collapse:separate; border-spacing:0; font-size:15px}
+.table th,.table td{padding:12px 14px; text-align:left; border-bottom:1px solid var(--line); vertical-align:top}
+.table th{width:28%; color:#374151; background:#fafafa}
+
+/* ===== ギャラリー ===== */
+.gallery{display:grid; grid-template-columns:repeat(3,1fr); gap:8px}
+.thumb{aspect-ratio:4/3; overflow:hidden; border-radius:12px; position:relative}
+.thumb img{width:100%; height:100%; object-fit:cover; transition:transform .5s ease}
+.thumb:hover img{transform:scale(1.06)}
+dialog.lightbox{padding:0; border:none; border-radius:16px; max-width:min(92vw,1100px)}
+.lb-img{width:100%; height:auto; display:block}
+.lb-bar{display:flex; justify-content:space-between; align-items:center; padding:10px 14px; background:#111827; color:#f9fafb; border-bottom:1px solid #1f2937; border-radius:16px 16px 0 0}
+.lb-close{background:#ef4444; color:white; border:none; border-radius:10px; padding:6px 10px; font-weight:700; cursor:pointer}
+
+/* ===== フッター ===== */
+footer{padding:30px 0 60px; color:var(--muted); border-top:1px solid var(--line)}
+
+/* ===== モバイル下部ナビ ===== */
+.bottom-nav{position:fixed; bottom:12px; left:0; right:0; display:flex; justify-content:center; pointer-events:none}
+.bottom-nav .wrap{pointer-events:auto; display:flex; gap:10px; background:rgba(255,255,255,.92); border:1px solid var(--line); border-radius:999px; box-shadow:var(--shadow); padding:8px 10px}
+.bottom-nav a{font-size:14px; padding:8px 12px; border-radius:999px; background:#f4f4f5}
+
+/* ===== アニメーション ===== */
+.reveal{opacity:0; transform:translateY(16px); transition:opacity .7s ease, transform .7s ease}
+.reveal.show{opacity:1; transform:none}
+
+/* ===== レスポンシブ ===== */
+@media (max-width:980px){
+  .grid-2{grid-template-columns:1fr}
+}
+@media (max-width:820px){
+  nav ul{display:none}
+  .menu-btn{display:inline-flex; padding:8px 10px; border:1px solid var(--line); border-radius:10px;}
+  .drawer{position:fixed; inset:0 0 0 auto; width:min(82vw,360px); background:white; border-left:1px solid var(--line); box-shadow:var(--shadow); transform:translateX(100%); transition:transform .3s ease; padding:18px}
+  .drawer.open{transform:none}
+  .drawer ul{display:flex; flex-direction:column; gap:10px; list-style:none; padding:0; margin:20px 0 0}
+  .drawer a{padding:10px 12px; border-radius:10px; background:#f4f4f5}
+}
+/* ===== 锚点滚动间距修正 ===== */
+section {
+  scroll-margin-top: 80px; /* 根据导航高度调整 */
+}
+
+/* === Section 背景交错 & 标题装饰 === */
+section.alt { background: linear-gradient(180deg, #faf9f7 0%, #ffffff 100%); }
+.section-title {
+  position: relative;
+  padding-bottom: 8px;
+}
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 30%;  /* ✅ 自动跟标题文字等长 */
+  max-width: 100%; /* 防止超出容器 */
+  background: linear-gradient(90deg, var(--brand), var(--accent));
+  border-radius: 999px;
+}
+
+
+/* === 卡片微动效 & 边线强调 === */
+.card{ transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.card:hover{ transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,.10); }
+.card h3{ border-left: 4px solid rgba(124,58,237,.35); padding-left:10px; }
+
+
+/* === 时间轴（When 用） === */
+.timeline{ position:relative; padding-left:28px; margin: 8px 0 0; }
+.timeline::before{
+  content:""; position:absolute; left:9px; top:0; bottom:0; width:2px; background:#e5e7eb;
+}
+.timeline li{
+  list-style:none; margin: 14px 0; position:relative; padding-left:6px;
+}
+.timeline li::before{
+  content:""; position:absolute; left:-3px; top:4px; width:10px; height:10px; border-radius:999px;
+  background: linear-gradient(135deg, var(--brand), var(--accent));
+  box-shadow: 0 0 0 3px #fff;
+}
+
+/* === Masonry 画廊（多图更活泼） === */
+.masonry{ column-count:1; column-gap:10px; }
+.masonry img{ width:100%; border-radius:12px; margin:0 0 10px; display:block; }
+@media(min-width:720px){ .masonry{ column-count:2; } }
+@media(min-width:1120px){ .masonry{ column-count:3; } }
+
+/* === Hero 轻遮罩 & 高度微调（更紧凑） === */
+.hero{ min-height: 52vh; }
+.hero::before{ filter: brightness(.6) saturate(1.05); }
+.hero::after{
+  opacity:.75; background: radial-gradient(60% 45% at 40% 50%, rgba(124,58,237,.25), transparent 72%);
+}
+
+
+.bottom-nav{ position:fixed; bottom:12px; left:0; right:0; display:flex; justify-content:center; pointer-events:none; z-index: 60; }
+.bottom-nav .wrap{ pointer-events:auto; display:flex; gap:10px; background:rgba(255,255,255,.92); border:1px solid var(--line); border-radius:999px; box-shadow:var(--shadow); padding:8px 10px }
+
+/* What 4图并排（小长方形） */
+/* What 区块：4张无卡片的平铺图片 */
+.what-thumbs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;                /* 图片之间留白 */
+  margin-top: 20px;         /* 与文字之间的空隙 */
+}
+
+.what-thumb {
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 0px;       /* 可选：略微圆角 */
+  border: 1px solid var(--line);
+  transition: transform .3s ease;
+}
+
+.what-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s ease;
+}
+
+.what-thumb:hover img {
+  transform: scale(1.06);
+}
+
+/* 复用你现有的 lightbox 风格（已在样式中定义） */
+@media (max-width: 720px){
+  .what-thumbs{ grid-template-columns: repeat(2, 1fr); }
+}
+/* 极简 LightBox：无文字、无按钮、无黑边、无遮罩 */
+dialog.barebox {
+  padding: 0;
+  border: none;
+  background: transparent;   /* 对话框本体透明 */
+}
+dialog.barebox::backdrop {
+  background: transparent;   /* 不要暗色遮罩 */
+}
+dialog.barebox img {
+  display: block;
+  max-width: 92vw;
+  max-height: 92vh;
+  height: auto;
+  width: auto;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;          /* 直角 */
+  margin: 0 auto;            /* 居中呈现 */
+}
+/* Who 卡片：更宽松的余白 */
+.card.roomy { padding: 24px !important; }
+.card.roomy p { margin: 10px 0 16px; }
+
+/* Who 中的并排缩略图（直角、小长方形、与 What 保持一致风格） */
+.who-thumbs{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;                /* 你的“稍微六点余白”：这里等效为 10px 的间距 */
+}
+.who-thumb{
+  display:block;
+  aspect-ratio: 4 / 3;
+  overflow:hidden;
+  border-radius: 0;
+  border:1px solid var(--line);
+}
+.who-thumb img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition: transform .4s ease;
+}
+.who-thumb:hover img{ transform: scale(1.06); }
+
+/* 手机时单列显示 */
+@media (max-width: 720px){
+  .who-thumbs{ grid-template-columns: 1fr; }
+}
+/* 修正：只对 #who 的“まとめ”卡片做居中，且不改变卡片高度 */
+#who .card.roomy:last-child {
+  /* 还原被放大的设置 */
+  align-items: normal;
+  justify-content: space-between; /* 保持与其他 .roomy 卡片一致的布局 */
+  height: auto;
+  min-height: 0;
+  text-align: left; /* 靠左  */
+  display: flex;      /* 确保可用自适应外边距 */
+  flex-direction: column;
+}
+
+#who .card.roomy:last-child h3 {
+  margin-bottom: 16px; /* 标题与段落的间距 */
+}
+
+#who .card.roomy:last-child p {
+  /* 关键：用自动外边距把段落推到卡片中间 */
+  margin-top: auto;
+  margin-bottom: auto;
+}
+/* When 顶部媒体：左图右视频 */
+.when-media {
+  align-items: center;            /* 垂直居中对齐两侧内容 */
+}
+
+/* 让左图完整铺满列宽且保持比例 */
+.when-media .media-left img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;             /* 可选：柔和一点 */
+}
+
+/* 16:9 自适应视频容器 */
+.video-16x9 {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;            /* 16:9 高宽比 */
+  border-radius: 8px;             /* 可选：柔和一点 */
+  overflow: hidden;
+}
+
+.video-16x9 iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+/* When 区块：纯图片 + 视频无卡片背景样式 */
+.when-thumb {
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+.when-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+.when-thumb:hover img { transform: scale(1.06); }
+
+.video-16x9 {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 比例 */
+  overflow: hidden;
+  border-radius: 8px;
+}
+.video-16x9 iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+/* 让 When 的图片与右侧视频等高：统一为 16:9 */
+.when-thumb {
+  aspect-ratio: 16 / 9;   /* 原来是 4 / 3，改成 16 / 9 */
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+.when-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+/* 图片和视频下方的小标题文字样式 */
+.media-caption {
+  text-align: center;
+  font-size: 15px;
+  color: var(--muted);
+  margin-top: 8px;
+  font-weight: 500;
+}
+/* When 節：「記録対象としての時間」カード長方形調整 */
+.card.tall {
+  min-height: 260px;        /* 你可以按需要改成 240～300px 之间 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* 垂直置中内容 */
+}
+/* Home 与 What 之间的间距 */
+#home {
+  margin-bottom: 60px; /* 根据视觉可调 40～80px */
+}
+/* What 的图片与 Who 区块之间增加间距 */
+#what + section {
+  margin-top: 80px; /* 可调整为 60～100px */
+}
+
+/* 或者更精确指定 Who 区块 */
+#who {
+  margin-top: 80px; /* 上方增加留白 */
+}
+/* Who 与 When 之间增加额外留白 */
+#when {
+  margin-top: 80px;   /* 可调节：60～100px 都行 */
+}
+/* When 和 Where 之间增加垂直余白 */
+#when + #where {
+  margin-top: 80px; /* 可调范围：60px～100px */
+}
+/* Where 和 Why 之间增加垂直余白 */
+#where + #why {
+  margin-top: 100px; /* 可调范围 60px～100px */
+}
+/* Why 和 How 之间增加垂直余白 */
+#why + #how {
+  margin-top: 80px; /* 可调范围 60px～100px */
+}
+/* How 和 How much 之间增加垂直余白 */
+#how + #howmuch {
+  margin-top: 80px; /* 可调 60px～100px */
+}
+/* ===== 底部导航按钮上色（与首页按钮风格一致） ===== */
+.bottom-nav a {
+  background: linear-gradient(135deg, var(--brand), var(--accent)); /* 渐变色 */
+  color: #fff;                     /* 白色文字 */
+  font-weight: 600;                /* 字体稍加粗 */
+  border: none;
+  box-shadow: var(--shadow);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+/* 悬停时略微放大 */
+.bottom-nav a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, .15);
+}
+/* How 区块：4个卡片并排 */
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* 响应式：平板2列，手机1列 */
+@media (max-width: 1024px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 720px) {
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+/* Why 区块：4个卡片并排 */
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* 响应式：平板2列，手机1列 */
+@media (max-width: 1024px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 720px) {
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+#why {
+  margin-top: 100px !important; /* 可调整为 80~120px */
+}
+/* How much 与 Footer 之间增加垂直余白 */
+#howmuch {
+  margin-bottom: 80px; /* 可根据视觉需要调整 60～100px */
+}
+/* 仅 #who 不做渐显，初始就显示 */
+#who.reveal { opacity:1; transform:none; }
+
+/* ===== How much：3枚カード横並び（How节同样的风格） ===== */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+/* ===== When 和 Where 之间增加更多余白 ===== */
+#when + #where {
+  margin-top: 120px; /* 原本是80px，增加至120px更宽松 */
+}
+/* ===== 各主要セクション間の余白を広げる ===== */
+#who {
+  margin-top: 100px;      /* 上方增加留白 */
+  margin-bottom: 100px;   /* 下方也留白，Who→When之间更自然 */
+}
+
+#when {
+  margin-top: 100px;      /* 与Who之间的距离 */
+  margin-bottom: 100px;   /* 与Where之间的距离 */
+}
+
+#when + #where {
+  margin-top: 120px;      /* Where开头更宽一点的间距 */
+}
+
+#where {
+  margin-bottom: 100px;   /* Where结束到Why之间也留白 */
+}
+/* ===== Where 区块地图样式 ===== */
+.map-frame iframe {
+  width: 100%;
+  height: 240px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 820px){
+  .map-frame iframe {
+    height: 260px; /* 在手机上稍微矮一点 */
+  }
+}
+/* ===== 藤まつり新配色方案：深紫为主，浅紫为辅，红绿点缀 ===== */
+:root{
+  --brand:    #7B5EA9;   /* 主色：深紫藤 */
+  --accent:   #D8C8EA;   /* 辅色：浅紫藤（背景用） */
+  --leaf:     #A2BD3E;   /* 点缀：枝藤绿 */
+  --highlight:#D52F21;   /* 强调：袈裟红 */
+}
+
+/* ===== 标题下划线：主紫→红 ===== */
+.section-title::after{
+  background: linear-gradient(90deg, var(--brand), var(--highlight)) !important;
+}
+
+/* ===== 主按钮 / 下方浮动按钮 ===== */
+.cta,
+.bottom-nav a{
+  background: var(--brand) !important;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  transition: all .25s ease;
+}
+.cta:hover,
+.bottom-nav a:hover{
+  background: linear-gradient(135deg, var(--brand), var(--highlight)) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, .15);
+}
+
+/* ===== 顶部导航 hover：浅紫淡化背景 ===== */
+nav a:hover{
+  background: rgba(123,94,169,.15) !important; /* 深紫透明版 */
+}
+
+/* ===== 卡片标题线条：深紫，hover 提亮浅紫 ===== */
+.card h3{
+  border-left: 4px solid var(--brand) !important;
+  color: var(--brand);
+}
+.card:hover h3{
+  border-color: var(--accent);
+}
+
+/* ===== 链接 hover：红 + 绿交替亮点 ===== */
+a:hover{
+  color: var(--highlight) !important;
+}
+
+/* ===== 页面整体微背景层次 ===== */
+body{
+  background: linear-gradient(180deg, #F8F6FB 0%, #FFFFFF 60%, #F9F9FA 100%);
+}
+
+/* ===== 底部导航背景半透明化 ===== */
+.bottom-nav .wrap{
+  background: rgba(255,255,255,.95);
+  border: 1px solid var(--accent);
+}
+
+/* ===== Hero 遮罩微调 ===== */
+.hero::after{
+  background: radial-gradient(60% 45% at 40% 50%, rgba(123,94,169,.25), transparent 70%);
+}
+
+/* 卡片左边线：浅紫 */
+.card h3{
+  border-left:4px solid var(--brand) !important;
+  color: var(--brand);
+}
+
+/* 链接 hover：红色 */
+a:hover{color:var(--highlight) !important;}
+
+/* 顶部导航 hover：浅紫淡化背景 */
+nav a:hover{background:rgba(216,200,234,.25) !important;}

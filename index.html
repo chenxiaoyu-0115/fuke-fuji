@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>筑紫野市 藤まつり｜デジタルアーカイブ</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== 上部ナビ ===== -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <nav aria-label="主なナビゲーション">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#what">概要（What）</a></li>
+          <li><a href="#who">関係者（Who）</a></li>
+          <li><a href="#when">開催情報（When）</a></li>
+          <li><a href="#where">祭場（Where）</a></li>
+          <li><a href="#why">意義（Why）</a></li>
+          <li><a href="#how">記録・保存（How）</a></li>
+          <li><a href="#howmuch">経済・運営（How much）</a></li>
+        </ul>
+      </nav>
+      <button class="menu-btn" aria-label="メニューを開く" onclick="toggleDrawer()">メニュー</button>
+    </div>
+  </header>
+
+  <!-- ===== モバイルドロワー ===== -->
+  <aside id="drawer" class="drawer" aria-hidden="true">
+    <strong>メニュー</strong>
+    <ul>
+      <li><a href="#home" onclick="toggleDrawer(false)">Home</a></li>
+      <li><a href="#what" onclick="toggleDrawer(false)">概要（What）</a></li>
+      <li><a href="#who" onclick="toggleDrawer(false)">関係者（Who）</a></li>
+      <li><a href="#when" onclick="toggleDrawer(false)">開催情報（When）</a></li>
+      <li><a href="#where" onclick="toggleDrawer(false)">祭場（Where）</a></li>
+      <li><a href="#why" onclick="toggleDrawer(false)">意義（Why）</a></li>
+      <li><a href="#how" onclick="toggleDrawer(false)">記録・保存（How）</a></li>
+      <li><a href="#howmuch" onclick="toggleDrawer(false)">経済・運営（How much）</a></li>
+    </ul>
+  </aside>
+
+  <!-- ===== Hero ===== -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>筑紫野市 藤まつり — 花と人がつなぐ春のまつり</h1>
+      <p>天拝山の麓に広がる藤棚と地域の文化を記録するデジタルアーカイブ。</p>
+      <a class="cta" href="#what">祭の概要へ</a>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- ===== 概要（What） ===== -->
+    <section id="what" class="container reveal">
+      <h2 class="section-title">祭の概要（What）</h2>
+      <p>
+        藤まつりは、福岡県筑紫野市で毎年開催される春の恒例イベントで、
+        天拝山の麓にある天拝公園を主な舞台に、地域の魅力と文化を体感できる行事です。
+        公園には見事な藤棚が広がり、見頃を迎える4月中旬から下旬にかけて多くの観光客でにぎわいます。
+      </p>
+      <p>
+        この祭りでは、美しい藤の花を背景に、ステージイベントやスタンプラリー、
+        物産即売会など多彩な催しが行われ、家族連れや地域の人々の交流の場ともなっています。
+      </p>
+      <p>
+        藤まつりは単なる花の鑑賞にとどまらず、地域の文化や歴史の継承、
+        観光振興、コミュニティの活性化といった社会的な意義も持ち合わせています。
+      </p>
+      <p>
+        観光協会の協力により、イベントの記録や住民インタビューなどが積極的に行われており、
+        映像・写真・文章などでのデジタルアーカイブ化も進められています。
+      </p>
+      <p>
+        気候変動や社会情勢の変化により、将来的に祭りのあり方が変わる可能性もあるなか、
+        今の姿を残すことは貴重な地域資源の保全にもつながります。
+      </p>
+    </section>
+
+    <!-- What 画像 -->
+    <section class="container reveal">
+      <div class="what-thumbs">
+        <a class="what-thumb" href="#" data-full="image/2.jpg"><img src="image/2.jpg" alt="藤まつり画像1"></a>
+        <a class="what-thumb" href="#" data-full="image/3.jpg"><img src="image/3.jpg" alt="藤まつり画像2"></a>
+        <a class="what-thumb" href="#" data-full="image/4.jpg"><img src="image/4.jpg" alt="藤まつり画像3"></a>
+        <a class="what-thumb" href="#" data-full="image/5.jpg"><img src="image/5.jpg" alt="藤まつり画像4"></a>
+      </div>
+    </section>
+
+    <!-- LightBox -->
+    <dialog id="lb-what" class="barebox" onclick="this.close()">
+      <img id="lb-what-img" alt="拡大画像" src="" />
+    </dialog>
+
+   <!-- ===== 主催者・関係者・参加者の役割（Who） ===== -->
+<section id="who" class="container reveal">
+  <h2 class="section-title">主催者・関係者・参加者の役割（Who）</h2>
+  <p class="section-lead">
+    藤まつりは地域全体が協力しあって創りあげるイベントであり、人々のつながりと自然の恵みを感じられる特別な機会となっています。
+  </p>
+
+  <!-- 主催者 / 協力団体 -->
+  <div class="grid-2">
+    <div class="card roomy">
+      <h3>主催者：筑紫野市観光協会</h3>
+      <p>
+        藤まつりは、筑紫野市観光協会が中心となって企画・運営されています。行政や地域団体と連携しながら、藤棚の管理、イベントステージ、出店手配、安全対策など多岐にわたる準備を行っています。
+      </p>
+      <div class="who-thumbs">
+        <a class="who-thumb" href="#" data-full="image/7.jpg"><img src="image/18.jpg" alt="主催者1"></a>
+        <a class="who-thumb" href="#" data-full="image/7.jpg"><img src="image/26.jpg" alt="主催者2"></a>
+      </div>
+    </div>
+
+    <div class="card roomy">
+      <h3>協力団体・ボランティア</h3>
+      <p>
+        地元の自治会、小中学校、市民団体がスタッフや出演者として参加します。藤の見守りや会場の案内、交通整理、スタンプラリー運営などを担い、まつり全体を支えています。
+      </p>
+      <div class="who-thumbs">
+        <a class="who-thumb" href="#" data-full="image/8.jpg"><img src="image/14.jpg" alt="ボランティア1"></a>
+        <a class="who-thumb" href="#" data-full="image/9.jpg"><img src="image/15.jpg" alt="設営準備1"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 出店者・来場者 -->
+  <div class="grid-2" style="margin-top:24px;">
+    <div class="card roomy">
+      <h3>出店者・パフォーマー</h3>
+      <p>
+        イベント当日は地元の飲食店や農産物販売者が物産ブースを出店し、ステージでは太鼓演奏、ダンス、吹奏楽などが披露されます。出演団体も地域に根ざした構成で、毎年趣向を凝らしたプログラムが実施されます。
+      </p>
+      <div class="who-thumbs">
+        <a class="who-thumb" href="#" data-full="image/1.jpg"><img src="image/46.jpg" alt="出店1"></a>
+        <a class="who-thumb" href="#" data-full="image/1.jpg"><img src="image/45.jpg" alt="パフォーマンス1"></a>
+      </div>
+    </div>
+
+    <div class="card roomy">
+      <h3>来場者</h3>
+      <p>
+        市内外から多くの来場者が訪れます。カメラを手に藤を楽しむ人、ファミリーでイベントを満喫する人、SNSで情報を発信する人など、多様な人々がそれぞれの目的で藤まつりに参加しています。
+      </p>
+      <div class="who-thumbs">
+        <a class="who-thumb" href="#" data-full="image/10.jpg"><img src="image/10.jpg" alt="来場者1"></a>
+        <a class="who-thumb" href="#" data-full="image/11.jpg"><img src="image/11.jpg" alt="来場者2"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 記録・発信 / まとめ -->
+  <div class="grid-2" style="margin-top:24px;">
+    <div class="card roomy">
+      <h3>記録・発信担当</h3>
+      <p>
+        観光協会スタッフや外部メディアが、写真や映像による記録を行い、SNSやホームページでの発信を行います。また、地域の高校生や学生がインタビューや記事作成に関わることもあります。
+      </p>
+      <div class="who-thumbs">
+        <a class="who-thumb" href="#" data-full="image/12.jpg"><img src="image/12.jpg" alt="記録担当1"></a>
+        <a class="who-thumb" href="#" data-full="image/13.jpg"><img src="image/13.jpg" alt="発信担当2"></a>
+      </div>
+    </div>
+
+    <div class="card roomy">
+      <h3>まとめ</h3>
+      <p>
+        このように、藤まつりは地域全体が協力しあって創りあげるイベントであり、人々のつながりと自然の恵みを感じられる特別な機会となっています。
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+   <!-- ===== 開催時期・時間・準備期間（When） ===== -->
+<section id="when" class="container reveal">
+  <h2 class="section-title">開催時期・時間・準備期間（When）</h2>
+
+  <!-- 説明パート（新嘗祭と同じく段落で導入） -->
+  <p>
+    藤まつりは毎年4月中旬〜下旬にかけて開催されます。藤の開花状況に応じて日程が調整され、見頃に合わせて数日間にわたり開催されます。
+    開催場所は天拝公園（筑紫野市）で、会場全体が藤の香りと美しさに包まれます。
+  </p>
+  <p>
+    主な開催時間は、<strong>10:00〜16:00</strong>のステージイベント（音楽演奏・ダンスなど）を中心に、
+    <strong>終日</strong>の藤棚鑑賞・物産販売・スタンプラリーが行われます。
+    また、<strong>夜間</strong>にライトアップが実施される日もあり、幻想的な藤の風景を楽しめます（開催日は年により異なります）。
+  </p>
+
+  <!-- 上：左側に1枚の写真＋右側に動画 -->
+  <div class="grid-2 when-media" style="margin-bottom:24px; align-items:center;">
+    <!-- 左側：1枚の写真（中央寄せ・比例調整） -->
+    <div class="when-photo-single">
+      <a class="when-thumb" href="#" data-full="image/22.jpg">
+        <img src="image/22.jpg" alt="藤まつり風景"
+             width="1280" height="720" loading="lazy" decoding="async">
+      </a>    
+      <p class="media-caption">2025式次第</p>
+    </div>
+  
+    <!-- 右側：動画（位置そのまま） -->
+    <div>
+      <div class="video-16x9">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/VIDEO_ID"
+          title="Fuji Festival Video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p class="media-caption">関連動画</p>
+    </div>
+  </div>
+
+  <!-- 準備期間（カード） -->
+  <div class="card" style="padding:20px; margin-top:24px;">
+    <h3>準備期間</h3>
+    <p>
+      イベントの準備はおよそ2〜3週間前から始まります。観光協会職員・市職員・地域ボランティアが協力し、以下のような準備が進められます：
+    </p>
+    <ul>
+      <li>藤棚の整備・誘引作業</li>
+      <li>出店エリアやステージの設営</li>
+      <li>警備・案内・交通整理体制の整備</li>
+      <li>パンフレットや案内看板の設置</li>
+      <li>メディア取材や記録撮影の段取り</li>
+    </ul>
+  </div>
+
+  <!-- 開催時間の構成（新嘗祭の「時間構成」カードに相当） -->
+  <div class="card" style="padding:20px; margin-top:24px;">
+    <h3>開催時間の構成（例）</h3>
+    <ul>
+      <li>10:00〜：ステージイベント開始（演奏・ダンス等）</li>
+      <li>日中：藤棚鑑賞・物産販売・スタンプラリー</li>
+      <li>日没後：ライトアップ（実施日は年により異なる）</li>
+    </ul>
+    <p>※天候や開花状況により、時間・プログラムは変更になる場合があります。</p>
+  </div>
+
+  <!-- 記録対象としての「時間」 -->
+  <div class="card" style="padding:20px; margin-top:24px;">
+    <h3>記録対象としての「時間」</h3>
+    <p>
+      デジタルアーカイブや地域記録としては、藤の開花日・満開日・イベント開催日・時間帯などを年ごとに記録することで、
+      開花傾向や来場者数の分析、今後の計画にも活用されます。
+    </p>
+  </div>
+</section>
+
+
+   <!-- ===== 会場構成・場所案内（Where） ===== -->
+<section id="where" class="container reveal">
+  <h2 class="section-title">会場構成・場所案内（Where）</h2>
+
+  <p>
+    藤まつりの主な会場は、福岡県筑紫野市にある天拝公園です。天拝山の麓に位置するこの公園は、藤の名所として知られ、
+    約30メートルにわたる見事な藤棚が訪れる人々を魅了します。アクセスの良さと自然に囲まれた立地で、地元だけでなく県外からの来訪者にも人気です。
+  </p>
+
+  <!-- 主なエリア構成 -->
+  <div class="card" style="padding:20px; margin-top:24px;">
+    <h3>主なエリア構成</h3>
+    <ul>
+      <li><strong>藤棚エリア：</strong>メインスポット。満開時には藤のトンネルができ、写真撮影の人気スポットになります。</li>
+      <li><strong>ステージエリア：</strong>音楽・ダンス・和太鼓などのイベントが日替わりで開催。</li>
+      <li><strong>物産・飲食ブース：</strong>地元産品やグルメを楽しめる出店が並びます。</li>
+      <li><strong>休憩所・芝生広場：</strong>家族連れがくつろげるエリア。</li>
+      <li><strong>スタンプラリーコーナー：</strong>こども向けイベントとして人気。</li>
+    </ul>
+  </div>
+
+  <!-- 会場の雰囲気と特徴 -->
+  <div class="card" style="padding:20px; margin-top:24px;">
+    <h3>会場の雰囲気と特徴</h3>
+    <p>
+      公園全体が藤の香りに包まれるなか、ゆったりと散策できる動線設計がされています。会場内はバリアフリー対応も進んでおり、
+      高齢者やベビーカー利用者でも安心して楽しめます。夜間には一部ライトアップも実施され、昼間とは異なる幻想的な景観が楽しめます。
+    </p>
+  </div>
+
+    <!-- アクセス情報（地図付き） -->
+    <div class="card" style="padding:20px; margin-top:24px;">
+      <h3>アクセス情報</h3>
+  
+      <div class="grid-2" style="align-items: center;">
+        <!-- 左側：Google Map -->
+        <div class="map-frame">
+          <iframe
+            src="https://www.google.com/maps?q=福岡県筑紫野市武蔵621-1+天拝公園&output=embed"
+            width="100%" height="320" style="border:0; border-radius:12px;"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+  
+        <!-- 右側：交通案内テキスト -->
+        <div>
+          <ul>
+            <li><strong>所在地：</strong>福岡県筑紫野市武蔵621-1（天拝公園）</li>
+            <li><strong>アクセス：</strong>JR二日市駅より徒歩約15分、西鉄二日市駅より徒歩約20分</li>
+            <li><strong>駐車場：</strong>臨時駐車場あり。混雑時は公共交通機関の利用を推奨。</li>
+          </ul>
+          <p>イベント当日は会場内に案内表示・スタッフが配置されており、道に迷うことなく安心して楽しめます。</p>
+        </div>
+      </div>
+    </div>
+  
+
+
+   <!-- ===== 祭の意義・開催する理由（Why） ===== -->
+<section id="why" class="container reveal">
+  <h2 class="section-title">藤まつりを開催する理由（Why）</h2>
+  <p>
+    藤まつりは、自然と人、地域の暮らしが交わる春の文化的営みです。継承・観光・交流・創造の循環を生み、
+    筑紫野市の魅力と誇りを次世代へつないでいきます。
+  </p>
+
+  <!-- 4つの理由カード（新嘗祭と同じ .grid-4 レイアウト） -->
+  <div class="grid-4" style="margin-top:24px;">
+    <div class="card" style="padding:20px;">
+      <h3>地域文化の継承</h3>
+      <p>
+        藤まつりは、筑紫野市に古くから根付いた地域行事であり、住民にとって春の風物詩です。
+        この祭りを通して、地元の自然・風景・人々の暮らしが一体となる文化的な営みが守り継がれています。
+      </p>
+    </div>
+
+    <div class="card" style="padding:20px;">
+      <h3>観光と地域の活性化</h3>
+      <p>
+        見事な藤棚とともに開催されるステージイベントや物産販売は、筑紫野市の魅力を広く発信する観光資源です。
+        市内外からの来訪者増により、地域経済にも好影響をもたらします。
+      </p>
+    </div>
+
+    <div class="card" style="padding:20px;">
+      <h3>住民交流とコミュニティ形成</h3>
+      <p>
+        準備・運営・演出には地域住民やボランティアが積極的に関わり、世代を超えた交流が生まれます。
+        「地域でつくる祭り」という意識が、まつりのあたたかさと魅力を支えています。
+      </p>
+    </div>
+
+    <div class="card" style="padding:20px;">
+      <h3>創造的な活動の場として</h3>
+      <p>
+        写真・映像・イラスト・デザインなど多様な表現活動が可能で、学生や地域アーティストが
+        作品を発表する場としても活用されています。
+      </p>
+    </div>
+  </div>
+
+  <!-- 追補カード（新嘗祭の構成に合わせて単独カードを配置） -->
+  <div class="card" style="padding:20px; margin-top:24px;">
+    <h3>後世への記録と継承</h3>
+    <p>
+      気候変動や社会の変化により、まつりの在り方も変わっていく中で、
+      写真・映像・文章などを活用した記録とアーカイブは貴重な地域文化の証となります。
+      将来の世代に「今の藤まつり」を伝える手段として、観光協会や記録者の役割も重要です。
+    </p>
+    <p style="margin-top:10px;">
+      あわせて、自然と文化が融合したこの祭りは<strong>筑紫野市のシンボル</strong>であり、
+      まちづくり・地域ブランディングの柱ともなっています。「藤のまち・ちくしの」を掲げ、
+      持続可能な文化の創造と魅力発信を目指します。
+    </p>
+  </div>
+</section>
+
+
+    <!-- ===== 儀式の流れ・道具・服装・音楽（How） ===== -->
+<section id="how" class="container reveal">
+  <h2 class="section-title">儀式の流れ・道具・服装・音楽（How）</h2>
+
+  <!-- 導入カード：儀式の主な流れ -->
+  <div class="card" style="padding:20px;">
+    <h3>儀式の主な流れ（神社・地方の例）</h3>
+    <ul>
+      <li>祭場の清め（清祓）：神職が塩や榊を使って場を浄化</li>
+      <li>神職の入場：狩衣を着た神職が祭場へ参進</li>
+      <li>修祓：祭員全員と供物を清める</li>
+      <li>祝詞奏上：その年の収穫に感謝する詞を神前で読み上げる</li>
+      <li>神饌奉納：新穀・酒・山海の幸を祭壇に供える</li>
+      <li>舞楽・神楽奉納：巫女による神楽舞や雅楽の演奏</li>
+      <li>玉串奉奠：玉串を捧げて祈念</li>
+      <li>直会（なおらい）：参列者が神饌を分かち合う共食</li>
+    </ul>
+  </div>
+
+  <!-- 4枚カード（同一フレーム） -->
+  <div class="grid-4" style="margin-top:24px;">
+
+    <!-- 使用される道具・神具 -->
+    <div class="card" style="padding:20px;">
+      <h3>使用される道具・神具</h3>
+      <ul>
+        <li>神饌：新米・酒・野菜・海産物などの供物</li>
+        <li>祭器具：瓶子（へいし）、三方、榊立、灯明など</li>
+        <li>祝詞（のりと）：神へ捧げる正式な文言</li>
+      </ul>
+    </div>
+
+    <!-- 服装と装束 -->
+    <div class="card" style="padding:20px;">
+      <h3>服装と装束</h3>
+      <ul>
+        <li><strong>神職：</strong>狩衣、浄衣、袴、冠など</li>
+        <li><strong>巫女：</strong>白衣・緋袴に緑の襷、鈴を持って舞う</li>
+        <li><strong>楽人：</strong>装束を着用し、笙・篳篥・太鼓などを演奏</li>
+      </ul>
+    </div>
+
+    <!-- 音楽と舞の役割 -->
+    <div class="card" style="padding:20px;">
+      <h3>音楽と舞の役割</h3>
+      <p>
+        神楽や雅楽は、神々をもてなすための重要な文化表現です。特に巫女舞は「言葉にできない祈り」を身体で表す神聖な舞とされ、
+        古代より続く無言のコミュニケーションのひとつと位置づけられます。
+      </p>
+    </div>
+
+    <!-- 記録方法と保存（藤まつりのアーカイブ方針に接続） -->
+    <div class="card" style="padding:20px;">
+      <h3>記録方法と保存</h3>
+      <p>
+        写真・映像・音声・文書・道具配置・参加者の動線などを総合的に記録し、後世への正確な継承を図ります。
+        祝詞や式次第の文字データ化、関係者の証言（オーラルヒストリー）等も組み合わせ、教育・研究・観光に活用します。
+      </p>
+    </div>
+
+  </div>
+  <!-- How 下面的四张无卡片图片（与 What 一致风格） -->
+<section class="container reveal" style="margin-top:24px;">
+  <div class="what-thumbs">
+    <a class="what-thumb" href="#" data-full="image/32.jpg" aria-label="How 写真1">
+      <img src="image/32.jpg" alt="How 写真1" loading="lazy" decoding="async">
+    </a>
+    <a class="what-thumb" href="#" data-full="image/37.jpg" aria-label="How 写真2">
+      <img src="image/37.jpg" alt="How 写真2" loading="lazy" decoding="async">
+    </a>
+    <a class="what-thumb" href="#" data-full="image/40.jpg" aria-label="How 写真3">
+      <img src="image/40.jpg" alt="How 写真3" loading="lazy" decoding="async">
+    </a>
+    <a class="what-thumb" href="#" data-full="image/36.jpg" aria-label="How 写真4">
+      <img src="image/36.jpg" alt="How 写真4" loading="lazy" decoding="async">
+    </a>
+  </div>
+</section>
+
+</section>
+
+
+   <!-- ===== 経済・運営（How much） ===== -->
+<section id="howmuch" class="container reveal">
+  <h2 class="section-title">経済・運営（How much）</h2>
+
+  <!-- イントロ：資金と波及効果の概要 -->
+  <div class="card" style="padding:20px; margin-top:24px;">
+    <h3>資金と費用・波及効果の概要</h3>
+    <p>
+      藤まつりは、来場者の消費・出店・地域連携・記録発信を通じて、文化と経済の好循環を生み出します。
+      会場設営・安全対策・広報などの運営費は、自治体支援や協賛、出店料などを組み合わせて賄われます。
+    </p>
+    <ul>
+      <li><strong>供物・物資の調達：</strong>地元農家や商店（新米・野菜・酒 等）</li>
+      <li><strong>来場者による消費：</strong>飲食・土産・交通などの支出</li>
+      <li><strong>観光誘致：</strong>藤まつりを目的とした来訪で回遊・宿泊の促進</li>
+    </ul>
+  </div>
+<!-- 運営の特徴・デジタル化・文化経済循環：3カード横並び -->
+<div class="grid-3" style="margin-top:24px;">
+  <div class="card roomy">
+    <h3>運営の特徴</h3>
+    <p>
+      開花時期に合わせた柔軟な日程運用、ボランティアとの協働、動線設計と安全対策の重視が特徴です。
+      ステージ・出店・来場導線を一体設計し、混雑時も安心して楽しめる環境を整えます。
+    </p>
+  </div>
+
+  <div class="card roomy">
+    <h3>デジタルコンテンツ化と収益化</h3>
+    <p>
+      祭の様子をデジタル記録し、オンライン配信・バーチャル体験として活用。
+      遠方からの視聴者獲得に加え、クラウドファンディングや文化支援型課金の導線としても機能します。
+    </p>
+  </div>
+
+  <div class="card roomy">
+    <h3>文化と経済の循環</h3>
+    <p>
+      文化は支出ではなく<strong>投資</strong>。藤まつりのような地域行事は、地域ブランディングや雇用創出、精神的満足を提供し、
+      地域経済の活性化と持続可能な社会づくりに貢献します。
+    </p>
+  </div>
+</div>
+
+
+  <!-- 詳細：資金計画 / 運営体制・人数・影響（2カラム） -->
+  <div class="grid-2" style="margin-top:24px;">
+    <div class="card roomy">
+      <h3>資金計画（概要）</h3>
+      <ul>
+        <li><strong>資金の調達方法：</strong>市補助金 など</li>
+        <li><strong>予算・資金源：</strong>市補助金・協賛金・出店料 等</li>
+        <li><strong>主な使用用途：</strong>会場設営費・警備費・保険・清掃・広報 等</li>
+      </ul>
+    </div>
+
+    <div class="card roomy">
+      <h3>運営体制・人数・影響</h3>
+      <ul>
+        <li><strong>スタッフ / ボランティア：</strong>正式な人数の計測は未実施。地域の協力とボランティアにより支えられています。</li>
+        <li><strong>来場者数（推定）：</strong>令和7年度は <strong>7,500人</strong></li>
+        <li><strong>地域への影響：</strong>武蔵寺の「長者の藤」の見頃も追い風となり、観光消費の拡大に寄与。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+  </main>
+
+  <footer class="container">
+    <div class="footer-links">
+      <a href="javascript:void(0)">お問合せ</a>
+      <a href="#interview">取材内容</a>
+      <a href="#about">このサイトについて</a>
+    </div>
+    <small>© 2025 筑紫野市 藤まつり デジタルアーカイブ</small>
+  </footer>
+
+  <div class="bottom-nav" aria-hidden="false">
+    <div class="wrap">
+      <a href="#what">What</a>
+      <a href="#who">Who</a>
+      <a href="#when">When</a>
+      <a href="#where">Where</a>
+      <a href="#why">Why</a>
+      <a href="#how">How</a>
+      <a href="#howmuch">How much</a>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script>
+    function toggleDrawer(force){
+      const el = document.getElementById('drawer');
+      const open = force!==undefined ? force : !el.classList.contains('open');
+      el.classList.toggle('open', open);
+      el.setAttribute('aria-hidden', String(!open));
+    }
+
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('show'); })
+    }, {threshold: .15});
+    document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
+
+    (function(){
+      const dlg = document.getElementById('lb-what');
+      const img = document.getElementById('lb-what-img');
+      document.querySelectorAll('.what-thumb, .who-thumb, .when-thumb').forEach(a=>{
+        a.addEventListener('click', (e)=>{
+          e.preventDefault();
+          const full = a.getAttribute('data-full');
+          if(full){ img.src = full; dlg.showModal(); }
+        });
+      });
+    })();
+    document.getElementById('when')?.classList.add('show');
+  </script>
+
+</body>
+</html>
