@@ -1,14 +1,14 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>筑紫野市 藤まつり｜デジタルアーカイブ</title>
+  <title>香椎宮 新嘗祭｜デジタルアーカイブ</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <!-- ===== 上部ナビ ===== -->
+  <!-- ===== 上部ナビ（サイトマップ対応） ===== -->
   <header class="nav">
     <div class="container nav-inner">
       <nav aria-label="主なナビゲーション">
@@ -19,15 +19,16 @@
           <li><a href="#when">開催情報（When）</a></li>
           <li><a href="#where">祭場（Where）</a></li>
           <li><a href="#why">意義（Why）</a></li>
-          <li><a href="#how">記録・保存（How）</a></li>
+          <li><a href="#how">儀式と記録（How）</a></li>
           <li><a href="#howmuch">経済・運営（How much）</a></li>
         </ul>
       </nav>
       <button class="menu-btn" aria-label="メニューを開く" onclick="toggleDrawer()">メニュー</button>
     </div>
   </header>
+  
 
-  <!-- ===== モバイルドロワー ===== -->
+  <!-- モバイルドロワー -->
   <aside id="drawer" class="drawer" aria-hidden="true">
     <strong>メニュー</strong>
     <ul>
@@ -37,517 +38,508 @@
       <li><a href="#when" onclick="toggleDrawer(false)">開催情報（When）</a></li>
       <li><a href="#where" onclick="toggleDrawer(false)">祭場（Where）</a></li>
       <li><a href="#why" onclick="toggleDrawer(false)">意義（Why）</a></li>
-      <li><a href="#how" onclick="toggleDrawer(false)">記録・保存（How）</a></li>
+      <li><a href="#how" onclick="toggleDrawer(false)">儀式と記録（How）</a></li>
       <li><a href="#howmuch" onclick="toggleDrawer(false)">経済・運営（How much）</a></li>
     </ul>
   </aside>
 
-  <!-- ===== Hero ===== -->
+  <!-- ===== トップ（Home） ===== -->
   <section id="home" class="hero">
     <div class="hero-content">
-      <h1>筑紫野市 藤まつり — 花と人がつなぐ春のまつり</h1>
-      <p>天拝山の麓に広がる藤棚と地域の文化を記録するデジタルアーカイブ。</p>
+      <h1>香椎宮 新嘗祭 — 祈りと感謝の儀</h1>
+      <p>五穀豊穣に感謝を捧げ、来る年の平安を祈る伝統祭礼。地域と神、人と自然をむすぶ祈りの記録。</p>
       <a class="cta" href="#what">祭の概要へ</a>
     </div>
   </section>
 
   <main>
+<!-- ===== 概要（What） ===== -->
+<section id="what" class="container reveal">
+  <h2 class="section-title">祭の概要（What）</h2>
+  <p>
+    新嘗祭（にいなめさい）は、毎年11月下旬に行われる日本の伝統的な祭礼で、
+    その年の収穫の恵みに感謝し、新穀を神に供える重要な神事です。起源は宮中祭祀に遡り、
+    現在では皇室をはじめ、全国の神社や地域でも広く執り行われています。
+  </p>
+  <p>
+    新嘗祭は五穀豊穣を祈願する農耕儀礼であり、日本の自然観や神道的価値観を象徴する
+    無形文化遺産とも言える行事です。儀式では、神職や巫女が伝統作法に則り、
+    精進された新米や酒、供物を神前に捧げ、祝詞（のりと）を奏上します。
+  </p>
+  <p>
+    また、地域によっては舞楽・神楽などの芸能が奉奏され、神々への感謝と喜びを表現します。
+    それぞれの土地に伝承されてきた様式の違いは、文化の多様性を示す貴重な証しです。
+  </p>
+  <p>
+    近年は高齢化や後継者不足により、伝統行事の継承が難しくなる中で、
+    写真・映像・音声・文書に加え、3Dモデルや口述記録などを活用した
+    デジタルアーカイブ化が進められています。
+  </p>
+  <p>
+    新嘗祭は単なる収穫祭ではなく、日本の精神文化・食文化・地域文化が凝縮された営みであり、
+    後世に正確に伝える価値のある豊かな文化遺産です。
+  </p>
+</section>
 
-    <!-- ===== 概要（What） ===== -->
-    <section id="what" class="container reveal">
-      <h2 class="section-title">祭の概要（What）</h2>
-      <p>
-        藤まつりは、福岡県筑紫野市で毎年開催される春の恒例イベントで、
-        天拝山の麓にある天拝公園を主な舞台に、地域の魅力と文化を体感できる行事です。
-        公園には見事な藤棚が広がり、見頃を迎える4月中旬から下旬にかけて多くの観光客でにぎわいます。
-      </p>
-      <p>
-        この祭りでは、美しい藤の花を背景に、ステージイベントやスタンプラリー、
-        物産即売会など多彩な催しが行われ、家族連れや地域の人々の交流の場ともなっています。
-      </p>
-      <p>
-        藤まつりは単なる花の鑑賞にとどまらず、地域の文化や歴史の継承、
-        観光振興、コミュニティの活性化といった社会的な意義も持ち合わせています。
-      </p>
-      <p>
-        観光協会の協力により、イベントの記録や住民インタビューなどが積極的に行われており、
-        映像・写真・文章などでのデジタルアーカイブ化も進められています。
-      </p>
-      <p>
-        気候変動や社会情勢の変化により、将来的に祭りのあり方が変わる可能性もあるなか、
-        今の姿を残すことは貴重な地域資源の保全にもつながります。
-      </p>
-    </section>
 
-    <!-- What 画像 -->
-    <section class="container reveal">
-      <div class="what-thumbs">
-        <a class="what-thumb" href="#" data-full="image/2.jpg"><img src="image/2.jpg" alt="藤まつり画像1"></a>
-        <a class="what-thumb" href="#" data-full="image/3.jpg"><img src="image/3.jpg" alt="藤まつり画像2"></a>
-        <a class="what-thumb" href="#" data-full="image/4.jpg"><img src="image/4.jpg" alt="藤まつり画像3"></a>
-        <a class="what-thumb" href="#" data-full="image/5.jpg"><img src="image/5.jpg" alt="藤まつり画像4"></a>
-      </div>
-    </section>
+<!-- ===== What 下方：4图并排 + LightBox ===== -->
+<section class="container reveal">
+  <div class="what-thumbs">
+    <a class="what-thumb" href="#" data-full="image/6.jpg" aria-label="LightBox Sample 1">
+      <img src="image/1.jpg" alt="LightBox Sample 1">
+    </a>
+    <a class="what-thumb" href="#" data-full="image/6.jpg" aria-label="LightBox Sample 2">
+      <img src="image/2.jpg" alt="LightBox Sample 2">
+    </a>
+    <a class="what-thumb" href="#" data-full="image/6.jpg" aria-label="LightBox Sample 3">
+      <img src="image/3.jpg" alt="LightBox Sample 3">
+    </a>
+    <a class="what-thumb" href="#" data-full="image/6.jpg" aria-label="LightBox Sample 4">
+      <img src="image/4.jpg" alt="LightBox Sample 4">
+    </a>
+  </div>
+</section>
 
-    <!-- LightBox -->
-    <dialog id="lb-what" class="barebox" onclick="this.close()">
-      <img id="lb-what-img" alt="拡大画像" src="" />
-    </dialog>
 
-   <!-- ===== 主催者・関係者・参加者の役割（Who） ===== -->
+<!-- LightBox对话框（通用，整站可复用） -->
+<!-- 极简 LightBox（无文字/无按钮/无黑边） -->
+<dialog id="lb-what" class="barebox" onclick="this.close()">
+  <img id="lb-what-img" alt="拡大画像" src="" />
+</dialog>
+
+
+
+    <!-- ===== 関係者と役割（Who） ===== -->
 <section id="who" class="container reveal">
-  <h2 class="section-title">主催者・関係者・参加者の役割（Who）</h2>
+  <h2 class="section-title">関係者・主催者・参加者の役割（Who）</h2>
   <p class="section-lead">
-    藤まつりは地域全体が協力しあって創りあげるイベントであり、人々のつながりと自然の恵みを感じられる特別な機会となっています。
+    新嘗祭には、多くの関係者がそれぞれの立場と役割を担い、厳粛かつ格式ある儀式が執り行われます。
+    主催は香椎宮のような神社や宮中であり、古来より皇室の重要な祭祀とされてきました。
   </p>
 
-  <!-- 主催者 / 協力団体 -->
+  <!-- 上排：主催者・神職 / 皇族・天皇 -->
   <div class="grid-2">
     <div class="card roomy">
-      <h3>主催者：筑紫野市観光協会</h3>
+      <h3>主催者・神職</h3>
       <p>
-        藤まつりは、筑紫野市観光協会が中心となって企画・運営されています。行政や地域団体と連携しながら、藤棚の管理、イベントステージ、出店手配、安全対策など多岐にわたる準備を行っています。
+        神社における新嘗祭では、宮司や神職が中心となり、祭典全体の進行を司ります。
+        祭壇の設営、神具や供物の準備、祝詞の奏上などが彼らの主な任務です。
+        伝統的な装束で儀式に臨み、神道の作法に則って厳かに執行されます。
       </p>
       <div class="who-thumbs">
-        <a class="who-thumb" href="#" data-full="image/7.jpg"><img src="image/18.jpg" alt="主催者1"></a>
-        <a class="who-thumb" href="#" data-full="image/7.jpg"><img src="image/26.jpg" alt="主催者2"></a>
+        <a class="who-thumb" href="#" data-full="image/6.jpg" aria-label="主催者・神職-1">
+          <img src="image/10.jpg" alt="主催者・神職-1">
+        </a>
+        <a class="who-thumb" href="#" data-full="image/6.jpg" aria-label="主催者・神職-2">
+          <img src="image/7.jpg" alt="主催者・神職-2">
+        </a>
       </div>
     </div>
 
     <div class="card roomy">
-      <h3>協力団体・ボランティア</h3>
+      <h3>皇族・天皇（宮中祭祀の場合）</h3>
       <p>
-        地元の自治会、小中学校、市民団体がスタッフや出演者として参加します。藤の見守りや会場の案内、交通整理、スタンプラリー運営などを担い、まつり全体を支えています。
+        宮中では天皇陛下自らが「神嘉殿」にて新穀を神に供え、同じものを「御親ら」召し上がることで、
+        神人共食の形式をとる重要な儀式です。これは古代より続く「国家祭祀」の形式の一つであり、
+        日本の統治と農耕の精神的結びつきを象徴しています。
       </p>
       <div class="who-thumbs">
-        <a class="who-thumb" href="#" data-full="image/8.jpg"><img src="image/14.jpg" alt="ボランティア1"></a>
-        <a class="who-thumb" href="#" data-full="image/9.jpg"><img src="image/15.jpg" alt="設営準備1"></a>
-      </div>
-    </div>
-  </div>
-
-  <!-- 出店者・来場者 -->
-  <div class="grid-2" style="margin-top:24px;">
-    <div class="card roomy">
-      <h3>出店者・パフォーマー</h3>
-      <p>
-        イベント当日は地元の飲食店や農産物販売者が物産ブースを出店し、ステージでは太鼓演奏、ダンス、吹奏楽などが披露されます。出演団体も地域に根ざした構成で、毎年趣向を凝らしたプログラムが実施されます。
-      </p>
-      <div class="who-thumbs">
-        <a class="who-thumb" href="#" data-full="image/1.jpg"><img src="image/46.jpg" alt="出店1"></a>
-        <a class="who-thumb" href="#" data-full="image/1.jpg"><img src="image/45.jpg" alt="パフォーマンス1"></a>
-      </div>
-    </div>
-
-    <div class="card roomy">
-      <h3>来場者</h3>
-      <p>
-        市内外から多くの来場者が訪れます。カメラを手に藤を楽しむ人、ファミリーでイベントを満喫する人、SNSで情報を発信する人など、多様な人々がそれぞれの目的で藤まつりに参加しています。
-      </p>
-      <div class="who-thumbs">
-        <a class="who-thumb" href="#" data-full="image/10.jpg"><img src="image/10.jpg" alt="来場者1"></a>
-        <a class="who-thumb" href="#" data-full="image/11.jpg"><img src="image/11.jpg" alt="来場者2"></a>
+        <a class="who-thumb" href="#" data-full="image/6.jpg" aria-label="皇族・天皇-1">
+          <img src="image/8.jpg" alt="皇族・天皇-1">
+        </a>
+        <a class="who-thumb" href="#" data-full="image/6.jpg" aria-label="皇族・天皇-2">
+          <img src="image/9.jpg" alt="皇族・天皇-2">
+        </a>
       </div>
     </div>
   </div>
 
-  <!-- 記録・発信 / まとめ -->
+  <!-- 下排：巫女・楽人 / 地域住民・氏子・来賓 -->
   <div class="grid-2" style="margin-top:24px;">
     <div class="card roomy">
-      <h3>記録・発信担当</h3>
+      <h3>巫女・楽人</h3>
       <p>
-        観光協会スタッフや外部メディアが、写真や映像による記録を行い、SNSやホームページでの発信を行います。また、地域の高校生や学生がインタビューや記事作成に関わることもあります。
+        巫女は、神楽舞（かぐらまい）を奉納し、神への祈りや感謝を身体表現で伝えます。
+        また、雅楽を奏でる楽人たちは、儀式の厳かさを音楽によって支える重要な役割を担っています。
       </p>
       <div class="who-thumbs">
-        <a class="who-thumb" href="#" data-full="image/12.jpg"><img src="image/12.jpg" alt="記録担当1"></a>
-        <a class="who-thumb" href="#" data-full="image/13.jpg"><img src="image/13.jpg" alt="発信担当2"></a>
+        <a class="who-thumb" href="#" data-full="image/6.jpg" aria-label="巫女・楽人-1">
+          <img src="image/19.jpg" alt="巫女・楽人-1">
+        </a>
+        <a class="who-thumb" href="#" data-full="image/6.jpg" aria-label="巫女・楽人-2">
+          <img src="image/11.jpg" alt="巫女・楽人-2">
+        </a>
+      </div>
+    </div>
+
+    <div class="card roomy">
+      <h3>地域住民・氏子・来賓</h3>
+      <p>
+        地元の氏子や参列者も新嘗祭に深く関わります。前日の準備や供物の献納、
+        神輿の担ぎ手、巫女の補助、地域の太鼓隊など、多様な形で祭礼に参加します。
+        来賓として地元自治体の代表などが招かれる場合もあります。
+      </p>
+      <div class="who-thumbs">
+        <a class="who-thumb" href="#" data-full="image/6.jpg" aria-label="地域住民・氏子・来賓-1">
+          <img src="image/5.jpg" alt="地域住民・氏子・来賓-1">
+        </a>
+        <a class="who-thumb" href="#" data-full="image/6.jpg" aria-label="地域住民・氏子・来賓-2">
+          <img src="image/18.jpg" alt="地域住民・氏子・来賓-2">
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- 最后一排：記録者・協力者 / まとめ -->
+  <div class="grid-2" style="margin-top:24px;">
+    <div class="card roomy">
+      <h3>記録者・協力者</h3>
+      <p>近年では、写真家、映像制作者、文化研究者などが記録チームとして参加し、
+        デジタルアーカイブ用の記録を行います。これにより、後世に伝えるための重要な一次資料が整備されます。
+        また、文化財保護委員会や大学、地域団体との連携も増えています。
+      </p>
+      <div class="who-thumbs">
+        <a class="who-thumb" href="#" data-full="image/6.jpg" aria-label="地域住民・氏子・来賓-1">
+          <img src="image/13.jpg" alt="地域住民・氏子・来賓-1">
+        </a>
+        <a class="who-thumb" href="#" data-full="image/6.jpg" aria-label="地域住民・氏子・来賓-2">
+          <img src="image/12.jpg" alt="地域住民・氏子・来賓-2">
+        </a>
       </div>
     </div>
 
     <div class="card roomy">
       <h3>まとめ</h3>
-      <p>
-        このように、藤まつりは地域全体が協力しあって創りあげるイベントであり、人々のつながりと自然の恵みを感じられる特別な機会となっています。
+      <p style="text-align:center;">
+        新嘗祭は単なる宗教儀礼ではなく、神と人、そして地域社会の絆を深める共同体的な営みです。
+        多様な関係者が協力しながら支えることで、伝統が現代に継承され、未来へと受け継がれていくのです。
       </p>
     </div>
+    
   </div>
 </section>
 
 
 
-   <!-- ===== 開催時期・時間・準備期間（When） ===== -->
+
 <section id="when" class="container reveal">
   <h2 class="section-title">開催時期・時間・準備期間（When）</h2>
 
-  <!-- 説明パート（新嘗祭と同じく段落で導入） -->
   <p>
-    藤まつりは毎年4月中旬〜下旬にかけて開催されます。藤の開花状況に応じて日程が調整され、見頃に合わせて数日間にわたり開催されます。
-    開催場所は天拝公園（筑紫野市）で、会場全体が藤の香りと美しさに包まれます。
-  </p>
-  <p>
-    主な開催時間は、<strong>10:00〜16:00</strong>のステージイベント（音楽演奏・ダンスなど）を中心に、
-    <strong>終日</strong>の藤棚鑑賞・物産販売・スタンプラリーが行われます。
-    また、<strong>夜間</strong>にライトアップが実施される日もあり、幻想的な藤の風景を楽しめます（開催日は年により異なります）。
+    新嘗祭（にいなめさい）は、例年11月23日（勤労感謝の日）を中心に、
+    全国各地の神社や宮中で執り行われます。
+    宮中祭祀では、この日に天皇陛下が「神嘉殿（しんかでん）」にて、
+    収穫された新穀を天照大神などの神々に捧げ、感謝の意を表します。
   </p>
 
-  <!-- 上：左側に1枚の写真＋右側に動画 -->
-  <div class="grid-2 when-media" style="margin-bottom:24px; align-items:center;">
-    <!-- 左側：1枚の写真（中央寄せ・比例調整） -->
-    <div class="when-photo-single">
-      <a class="when-thumb" href="#" data-full="image/22.jpg">
-        <img src="image/22.jpg" alt="藤まつり風景"
-             width="1280" height="720" loading="lazy" decoding="async">
-      </a>    
-      <p class="media-caption">2025式次第</p>
+  <p>
+    一方、各地域の神社では、11月中旬〜下旬にかけて開催されることが多く、
+    日程や時間帯は地域の慣習に応じて異なります。
+    昼間に実施される例もあれば、夕方から夜間にかけて神事が行われる場合もあります。
+  </p>
+
+  <!-- 上：左图 + 右视频（无卡片背景） -->
+  <div class="grid-2" style="margin-bottom:24px;">
+    <!-- 左列：图片 -->
+    <div>
+      <a class="when-thumb" href="#" data-full="image/15.jpg" aria-label="When-Image">
+        <img src="image/15.jpg" alt="新嘗祭のイメージ">
+      </a>
+      <p class="media-caption">2024式次第</p>
     </div>
   
-    <!-- 右側：動画（位置そのまま） -->
+    <!-- 右列：视频（把日期放到这个 div 里面） -->
     <div>
-     <!-- 用这个替换你 index.html 中原来的 iframe（位于 #when 部分的视频） -->
-<div class="video-16x9">
-  <iframe
-    src="https://www.youtube-nocookie.com/embed/ZXDjORhPsYw"
-    title="Fuji Festival Video"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
-  </iframe>
-</div>
-
-      <p class="media-caption">関連動画</p>
+      <div class="video-16x9">
+        <video controls>
+          <source src="video/kashii_niiname2024.mp4" type="video/mp4">
+          お使いのブラウザは動画を再生できません。
+        </video>
+      </div>
+      <!-- 日期放在这里（视频下面，同一个父div里） -->
+      <p class="media-caption">2024年11月23日</p>
     </div>
+    
   </div>
+  
 
-  <!-- 準備期間（カード） -->
+
   <div class="card" style="padding:20px; margin-top:24px;">
     <h3>準備期間</h3>
-    <p>
-      イベントの準備はおよそ2〜3週間前から始まります。観光協会職員・市職員・地域ボランティアが協力し、以下のような準備が進められます：
-    </p>
+    <p>新嘗祭の準備は、通常1ヶ月以上前から始まります。以下のような作業が段階的に進められます：</p>
     <ul>
-      <li>藤棚の整備・誘引作業</li>
-      <li>出店エリアやステージの設営</li>
-      <li>警備・案内・交通整理体制の整備</li>
-      <li>パンフレットや案内看板の設置</li>
-      <li>メディア取材や記録撮影の段取り</li>
+      <li>新穀（稲・米）の収穫・精米</li>
+      <li>神具や供物の準備（酒、野菜、果物など）</li>
+      <li>祭壇の設営、神殿の清掃</li>
+      <li>祝詞の準備・読み合わせ、神職や巫女の稽古</li>
+      <li>地元住民による支援体制の構築（神輿、太鼓など）</li>
     </ul>
   </div>
 
-  <!-- 開催時間の構成（新嘗祭の「時間構成」カードに相当） -->
   <div class="card" style="padding:20px; margin-top:24px;">
-    <h3>開催時間の構成（例）</h3>
+    <h3>神事の時間構成（例）</h3>
+    <p>地域によって異なりますが、一般的な新嘗祭の当日の流れは次の通りです：</p>
     <ul>
-      <li>10:00〜：ステージイベント開始（演奏・ダンス等）</li>
-      <li>日中：藤棚鑑賞・物産販売・スタンプラリー</li>
-      <li>日没後：ライトアップ（実施日は年により異なる）</li>
+      <li>17:00～：祭場清祓、火入れ式</li>
+      <li>18:00～：新穀奉納、祝詞奏上、神楽奉納</li>
+      <li>19:00～：地域住民の参拝・直会（なおらい）</li>
     </ul>
-    <p>※天候や開花状況により、時間・プログラムは変更になる場合があります。</p>
+    <p>※神社によっては昼間開催や、翌日まで続く例もあります。</p>
   </div>
 
-  <!-- 記録対象としての「時間」 -->
-  <div class="card" style="padding:20px; margin-top:24px;">
+  <div class="card " style="padding:20px; margin-top:24px;">
     <h3>記録対象としての「時間」</h3>
     <p>
-      デジタルアーカイブや地域記録としては、藤の開花日・満開日・イベント開催日・時間帯などを年ごとに記録することで、
-      開花傾向や来場者数の分析、今後の計画にも活用されます。
+      デジタルアーカイブにおいては、祭の開催年・日時・所要時間を正確に記録することが求められます。
+      また、式次第や当日の進行表をあわせて保存することで、
+      年ごとの変化や地域差を比較研究する際の基礎資料となります。
     </p>
   </div>
 </section>
 
-
-   <!-- ===== 会場構成・場所案内（Where） ===== -->
 <section id="where" class="container reveal">
-  <h2 class="section-title">会場構成・場所案内（Where）</h2>
+  <h2 class="section-title">祭場の配置・空間構成（Where）</h2>
 
   <p>
-    藤まつりの主な会場は、福岡県筑紫野市にある天拝公園です。天拝山の麓に位置するこの公園は、藤の名所として知られ、
-    約30メートルにわたる見事な藤棚が訪れる人々を魅了します。アクセスの良さと自然に囲まれた立地で、地元だけでなく県外からの来訪者にも人気です。
+    新嘗祭の神事は、神社本殿・拝殿・境内・仮設舞台など、神聖な空間の中で厳粛に行われます。
+    空間配置は、神職の所作や儀式の流れに沿って緻密に設計され、参加者や参拝者の動線も考慮されています。
   </p>
 
-  <!-- 主なエリア構成 -->
   <div class="card" style="padding:20px; margin-top:24px;">
-    <h3>主なエリア構成</h3>
+    <h3>主な構成空間</h3>
     <ul>
-      <li><strong>藤棚エリア：</strong>メインスポット。満開時には藤のトンネルができ、写真撮影の人気スポットになります。</li>
-      <li><strong>ステージエリア：</strong>音楽・ダンス・和太鼓などのイベントが日替わりで開催。</li>
-      <li><strong>物産・飲食ブース：</strong>地元産品やグルメを楽しめる出店が並びます。</li>
-      <li><strong>休憩所・芝生広場：</strong>家族連れがくつろげるエリア。</li>
-      <li><strong>スタンプラリーコーナー：</strong>こども向けイベントとして人気。</li>
+      <li><strong>本殿（ほんでん）：</strong>神霊が宿る神聖な場所。祭りの中心となる。</li>
+      <li><strong>拝殿（はいでん）：</strong>神職が祝詞を奏上し、神饌を奉納する儀式の場。</li>
+      <li><strong>神楽殿（かぐらでん）：</strong>神楽や舞楽が奉納される舞台。仮設の場合もある。</li>
+      <li><strong>祭壇（さいだん）：</strong>新穀、日本酒、海の幸・山の幸などの供物が整然と並ぶ。</li>
+      <li><strong>斎場・清め場：</strong>神職や供物を清める場。祭前の儀式に使用。</li>
+      <li><strong>参道・境内：</strong>参列者や一般来訪者の動線。露店・灯籠・案内所などが設けられる。</li>
     </ul>
   </div>
 
-  <!-- 会場の雰囲気と特徴 -->
   <div class="card" style="padding:20px; margin-top:24px;">
-    <h3>会場の雰囲気と特徴</h3>
+    <h3>空間の意味</h3>
     <p>
-      公園全体が藤の香りに包まれるなか、ゆったりと散策できる動線設計がされています。会場内はバリアフリー対応も進んでおり、
-      高齢者やベビーカー利用者でも安心して楽しめます。夜間には一部ライトアップも実施され、昼間とは異なる幻想的な景観が楽しめます。
+      新嘗祭の祭場は、現世（人間界）と神域（神々の世界）をつなぐ「結界」としての機能を持ちます。
+      本殿を中心とし、段階的に聖性が変化する空間設計によって、神との一体感を感じられる構造となっています。
+      特に「神職の動線」や「供物の位置」「神前と参拝者の距離感」は、空間デザインの核心要素です。
     </p>
   </div>
 
-    <!-- アクセス情報（地図付き） -->
-    <div class="card" style="padding:20px; margin-top:24px;">
-      <h3>アクセス情報</h3>
-  
-      <div class="grid-2" style="align-items: center;">
-        <!-- 左側：Google Map -->
-        <div class="map-frame">
-          <iframe
-            src="https://www.google.com/maps?q=福岡県筑紫野市武蔵621-1+天拝公園&output=embed"
-            width="100%" height="320" style="border:0; border-radius:12px;"
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+  <div class="card" style="padding:20px; margin-top:24px;">
+    <h3>記録の対象としての空間構成</h3>
+    <p>デジタルアーカイブにおいては、以下の空間情報を詳細に記録・保存することが推奨されます：</p>
+    <ul>
+      <li>神事が行われた場所（本殿・拝殿・境内の区別）</li>
+      <li>供物や神具の配置図・舞台の設置位置</li>
+      <li>舞の演目場所と動線</li>
+      <li>照明・灯籠・装飾などの配置</li>
+      <li>参拝者の動線・座席・結界の位置</li>
+      <li>全体写真／動画による俯瞰構図の記録</li>
+    </ul>
+    <p>
+      これらの空間構成を3Dスキャン、ドローン撮影、図面データ化などで記録することで、
+      儀式の復元や後世の比較研究、災害復旧時の再建など、多角的な活用が可能になります。
+    </p>
+  </div>
+
+    <!-- ===== 祭の意義と信仰背景（Why） ===== -->
+    <section id="why" class="container reveal">
+      <h2 class="section-title">祭の意味・信仰背景（Why）</h2>
+      <p>
+        新嘗祭（にいなめさい）は、五穀豊穣に感謝し、新たに収穫された穀物を神に捧げる
+        日本最古の農耕儀礼の一つです。神道の信仰体系に基づき、
+        「自然と共に生きること」や「神々への感謝」を表す重要な儀式であり、
+        国家・地域・個人が一体となる精神的な営みでもあります。
+      </p>
+    
+      <!-- ✅ 四个卡片并排 -->
+      <div class="grid-4" style="margin-top:24px;">
+        <div class="card" style="padding:20px;">
+          <h3>神への感謝と共生の精神</h3>
+          <p>
+            日本の神道では、山・海・風・稲など、自然界すべてに神が宿るとされ、
+            農作物の実りは神々の御加護によるものと捉えられています。
+            新嘗祭では、その年の収穫物（新穀）をまず神に捧げ、
+            人は神と共に食することで、自然と神とのつながりを再確認します。
+            これは「神人共食（しんじんきょうしょく）」の思想を体現するものであり、
+            日本文化の根幹をなしています。
+          </p>
         </div>
-  
-        <!-- 右側：交通案内テキスト -->
-        <div>
-          <ul>
-            <li><strong>所在地：</strong>福岡県筑紫野市武蔵621-1（天拝公園）</li>
-            <li><strong>アクセス：</strong>JR二日市駅より徒歩約15分、西鉄二日市駅より徒歩約20分</li>
-            <li><strong>駐車場：</strong>臨時駐車場あり。混雑時は公共交通機関の利用を推奨。</li>
-          </ul>
-          <p>イベント当日は会場内に案内表示・スタッフが配置されており、道に迷うことなく安心して楽しめます。</p>
+    
+        <div class="card" style="padding:20px;">
+          <h3>国家儀礼としての意味</h3>
+          <p>
+            宮中における新嘗祭は、天皇自らが新穀を捧げ、自らも食するという国家的な祭祀であり、
+            「農耕神事」と「国の安寧」を祈る政治的・宗教的な行事です。
+            天皇は「稲の祭司」としての役割を担い、民の暮らしと国家の繁栄を願う存在とされています。
+          </p>
+        </div>
+    
+        <div class="card" style="padding:20px;">
+          <h3>地域社会とのつながり</h3>
+          <p>
+            地方の神社では、地域住民によって新嘗祭が支えられ、共同体の絆を再確認する機会ともなります。
+            田植えから収穫、供物の準備までを地域で分担することで、
+            祭は単なる神事にとどまらず、文化と生活が融合した共同体的儀礼として機能します。
+          </p>
+        </div>
+    
+        <div class="card" style="padding:20px;">
+          <h3>文化遺産としての意義</h3>
+          <p>
+            グローバル化が進む現代において、無形文化財としての新嘗祭の価値はますます高まっています。
+            地域アイデンティティや民族的精神の源泉であり、
+            ユネスコも無形文化遺産の保護を国際的に推進しています。
+            一度失われれば二度と復元できない「精神文化」の象徴として、
+            新嘗祭の継承は社会的にも重要な課題です。
+          </p>
         </div>
       </div>
-    </div>
-  
+    
+      <div class="card" style="padding:20px; margin-top:24px;">
+        <h3>デジタルアーカイブによる継承の可能性</h3>
+        <p>
+          新嘗祭の意味や信仰を次世代に正確に伝えるため、
+          儀式の映像記録や祝詞の文書化、関係者の証言録音など、
+          多角的なアーカイブが重要視されています。
+          デジタル記録は教育・研究・観光に活用されるだけでなく、
+          「何のためにこの祭が存在するのか」という本質的価値を未来に残す手段ともなります。
+        </p>
+      </div>
+    </section>
+    
+    <!-- ===== 儀式と記録方法（How） ===== -->
+    <section id="how" class="container reveal">
+      <h2 class="section-title">儀式の流れ・道具・服装・音楽（How）</h2>
+    
+      <div class="card" style="padding:20px;">
+        <h3>儀式の主な流れ（神社・地方の例）</h3>
+        <ul>
+          <li>祭場の清め（清祓）：神職が塩や榊を使って場を浄化</li>
+          <li>神職の入場：狩衣を着た神職が祭場へ参進</li>
+          <li>修祓：祭員全員と供物を清める</li>
+          <li>祝詞奏上：その年の収穫に感謝する詞を神前で読み上げる</li>
+          <li>神饌奉納：新穀・酒・山海の幸を祭壇に供える</li>
+          <li>舞楽・神楽奉納：巫女による神楽舞や雅楽の演奏</li>
+          <li>玉串奉奠：玉串を捧げて祈念</li>
+          <li>直会（なおらい）：参列者が神饌を分かち合う共食</li>
+        </ul>
+      </div>
+    
+      <!-- ✅ 四个卡片并排 -->
+      <div class="grid-4" style="margin-top:24px;">
+        <div class="card" style="padding:20px;">
+          <h3>使用される道具・神具</h3>
+          <ul>
+            <li>神饌：新米・酒・野菜・海産物などの供物</li>
+            <li>祭器具：瓶子（へいし）、三方、榊立、灯明など</li>
+            <li>祝詞（のりと）：神へ捧げる正式な文言</li>
+          </ul>
+        </div>
+    
+        <div class="card" style="padding:20px;">
+          <h3>服装と装束</h3>
+          <ul>
+            <li><strong>神職：</strong>狩衣、浄衣、袴、冠など</li>
+            <li><strong>巫女：</strong>白衣・緋袴に緑の襷、鈴を持って舞う</li>
+            <li><strong>楽人：</strong>装束を着用し、笙・篳篥・太鼓などを演奏</li>
+          </ul>
+        </div>
+    
+        <div class="card" style="padding:20px;">
+          <h3>音楽と舞の役割</h3>
+          <p>
+            神楽や雅楽は、神々をもてなすための重要な文化表現です。
+            特に巫女舞は「言葉にできない祈り」を身体で表す神聖な舞とされ、
+            古代より続く無言のコミュニケーションのひとつと位置づけられます。
+          </p>
+        </div>
+    
+        <div class="card" style="padding:20px;">
+          <h3>記録方法と保存</h3>
+          <p>
+            デジタルアーカイブでは、儀式の映像・音声・文書・道具配置・参加者の動線などを総合的に記録します。
+            写真・動画・音声・祝詞の文字データを併用し、後世への正確な継承を可能にします。
+          </p>
+        </div>
+      </div>
+    </section>
+    
 
 
-   <!-- ===== 祭の意義・開催する理由（Why） ===== -->
-<section id="why" class="container reveal">
-  <h2 class="section-title">藤まつりを開催する理由（Why）</h2>
-  <p>
-    藤まつりは、自然と人、地域の暮らしが交わる春の文化的営みです。継承・観光・交流・創造の循環を生み、
-    筑紫野市の魅力と誇りを次世代へつないでいきます。
-  </p>
-
-  <!-- 4つの理由カード（新嘗祭と同じ .grid-4 レイアウト） -->
-  <div class="grid-4" style="margin-top:24px;">
-    <div class="card" style="padding:20px;">
-      <h3>地域文化の継承</h3>
-      <p>
-        藤まつりは、筑紫野市に古くから根付いた地域行事であり、住民にとって春の風物詩です。
-        この祭りを通して、地元の自然・風景・人々の暮らしが一体となる文化的な営みが守り継がれています。
-      </p>
-    </div>
-
-    <div class="card" style="padding:20px;">
-      <h3>観光と地域の活性化</h3>
-      <p>
-        見事な藤棚とともに開催されるステージイベントや物産販売は、筑紫野市の魅力を広く発信する観光資源です。
-        市内外からの来訪者増により、地域経済にも好影響をもたらします。
-      </p>
-    </div>
-
-    <div class="card" style="padding:20px;">
-      <h3>住民交流とコミュニティ形成</h3>
-      <p>
-        準備・運営・演出には地域住民やボランティアが積極的に関わり、世代を超えた交流が生まれます。
-        「地域でつくる祭り」という意識が、まつりのあたたかさと魅力を支えています。
-      </p>
-    </div>
-
-    <div class="card" style="padding:20px;">
-      <h3>創造的な活動の場として</h3>
-      <p>
-        写真・映像・イラスト・デザインなど多様な表現活動が可能で、学生や地域アーティストが
-        作品を発表する場としても活用されています。
-      </p>
-    </div>
-  </div>
-
-  <!-- 追補カード（新嘗祭の構成に合わせて単独カードを配置） -->
-  <div class="card" style="padding:20px; margin-top:24px;">
-    <h3>後世への記録と継承</h3>
-    <p>
-      気候変動や社会の変化により、まつりの在り方も変わっていく中で、
-      写真・映像・文章などを活用した記録とアーカイブは貴重な地域文化の証となります。
-      将来の世代に「今の藤まつり」を伝える手段として、観光協会や記録者の役割も重要です。
-    </p>
-    <p style="margin-top:10px;">
-      あわせて、自然と文化が融合したこの祭りは<strong>筑紫野市のシンボル</strong>であり、
-      まちづくり・地域ブランディングの柱ともなっています。「藤のまち・ちくしの」を掲げ、
-      持続可能な文化の創造と魅力発信を目指します。
-    </p>
-  </div>
-</section>
-
-
-    <!-- ===== 儀式の流れ・道具・服装・音楽（How） ===== -->
-<section id="how" class="container reveal">
-  <h2 class="section-title">儀式の流れ・道具・服装・音楽（How）</h2>
-
-  <!-- 導入カード：儀式の主な流れ -->
-  <div class="card" style="padding:20px;">
-    <h3>儀式の主な流れ（神社・地方の例）</h3>
-    <ul>
-      <li>祭場の清め（清祓）：神職が塩や榊を使って場を浄化</li>
-      <li>神職の入場：狩衣を着た神職が祭場へ参進</li>
-      <li>修祓：祭員全員と供物を清める</li>
-      <li>祝詞奏上：その年の収穫に感謝する詞を神前で読み上げる</li>
-      <li>神饌奉納：新穀・酒・山海の幸を祭壇に供える</li>
-      <li>舞楽・神楽奉納：巫女による神楽舞や雅楽の演奏</li>
-      <li>玉串奉奠：玉串を捧げて祈念</li>
-      <li>直会（なおらい）：参列者が神饌を分かち合う共食</li>
-    </ul>
-  </div>
-
-  <!-- 4枚カード（同一フレーム） -->
-  <div class="grid-4" style="margin-top:24px;">
-
-    <!-- 使用される道具・神具 -->
-    <div class="card" style="padding:20px;">
-      <h3>使用される道具・神具</h3>
-      <ul>
-        <li>神饌：新米・酒・野菜・海産物などの供物</li>
-        <li>祭器具：瓶子（へいし）、三方、榊立、灯明など</li>
-        <li>祝詞（のりと）：神へ捧げる正式な文言</li>
-      </ul>
-    </div>
-
-    <!-- 服装と装束 -->
-    <div class="card" style="padding:20px;">
-      <h3>服装と装束</h3>
-      <ul>
-        <li><strong>神職：</strong>狩衣、浄衣、袴、冠など</li>
-        <li><strong>巫女：</strong>白衣・緋袴に緑の襷、鈴を持って舞う</li>
-        <li><strong>楽人：</strong>装束を着用し、笙・篳篥・太鼓などを演奏</li>
-      </ul>
-    </div>
-
-    <!-- 音楽と舞の役割 -->
-    <div class="card" style="padding:20px;">
-      <h3>音楽と舞の役割</h3>
-      <p>
-        神楽や雅楽は、神々をもてなすための重要な文化表現です。特に巫女舞は「言葉にできない祈り」を身体で表す神聖な舞とされ、
-        古代より続く無言のコミュニケーションのひとつと位置づけられます。
-      </p>
-    </div>
-
-    <!-- 記録方法と保存（藤まつりのアーカイブ方針に接続） -->
-    <div class="card" style="padding:20px;">
-      <h3>記録方法と保存</h3>
-      <p>
-        写真・映像・音声・文書・道具配置・参加者の動線などを総合的に記録し、後世への正確な継承を図ります。
-        祝詞や式次第の文字データ化、関係者の証言（オーラルヒストリー）等も組み合わせ、教育・研究・観光に活用します。
-      </p>
-    </div>
-
-  </div>
-  <!-- How 下面的四张无卡片图片（与 What 一致风格） -->
-<section class="container reveal" style="margin-top:24px;">
-  <div class="what-thumbs">
-    <a class="what-thumb" href="#" data-full="image/32.jpg" aria-label="How 写真1">
-      <img src="image/32.jpg" alt="How 写真1" loading="lazy" decoding="async">
-    </a>
-    <a class="what-thumb" href="#" data-full="image/37.jpg" aria-label="How 写真2">
-      <img src="image/37.jpg" alt="How 写真2" loading="lazy" decoding="async">
-    </a>
-    <a class="what-thumb" href="#" data-full="image/40.jpg" aria-label="How 写真3">
-      <img src="image/40.jpg" alt="How 写真3" loading="lazy" decoding="async">
-    </a>
-    <a class="what-thumb" href="#" data-full="image/36.jpg" aria-label="How 写真4">
-      <img src="image/36.jpg" alt="How 写真4" loading="lazy" decoding="async">
-    </a>
-  </div>
-</section>
-
-</section>
-
-
-   <!-- ===== 経済・運営（How much） ===== -->
-<section id="howmuch" class="container reveal">
-  <h2 class="section-title">経済・運営（How much）</h2>
-
-  <!-- イントロ：資金と波及効果の概要 -->
-  <div class="card" style="padding:20px; margin-top:24px;">
-    <h3>資金と費用・波及効果の概要</h3>
-    <p>
-      藤まつりは、来場者の消費・出店・地域連携・記録発信を通じて、文化と経済の好循環を生み出します。
-      会場設営・安全対策・広報などの運営費は、自治体支援や協賛、出店料などを組み合わせて賄われます。
-    </p>
-    <ul>
-      <li><strong>供物・物資の調達：</strong>地元農家や商店（新米・野菜・酒 等）</li>
-      <li><strong>来場者による消費：</strong>飲食・土産・交通などの支出</li>
-      <li><strong>観光誘致：</strong>藤まつりを目的とした来訪で回遊・宿泊の促進</li>
-    </ul>
-  </div>
-<!-- 運営の特徴・デジタル化・文化経済循環：3カード横並び -->
-<div class="grid-3" style="margin-top:24px;">
-  <div class="card roomy">
-    <h3>運営の特徴</h3>
-    <p>
-      開花時期に合わせた柔軟な日程運用、ボランティアとの協働、動線設計と安全対策の重視が特徴です。
-      ステージ・出店・来場導線を一体設計し、混雑時も安心して楽しめる環境を整えます。
-    </p>
-  </div>
-
-  <div class="card roomy">
-    <h3>デジタルコンテンツ化と収益化</h3>
-    <p>
-      祭の様子をデジタル記録し、オンライン配信・バーチャル体験として活用。
-      遠方からの視聴者獲得に加え、クラウドファンディングや文化支援型課金の導線としても機能します。
-    </p>
-  </div>
-
-  <div class="card roomy">
-    <h3>文化と経済の循環</h3>
-    <p>
-      文化は支出ではなく<strong>投資</strong>。藤まつりのような地域行事は、地域ブランディングや雇用創出、精神的満足を提供し、
-      地域経済の活性化と持続可能な社会づくりに貢献します。
-    </p>
-  </div>
-</div>
-
-
-  <!-- 詳細：資金計画 / 運営体制・人数・影響（2カラム） -->
-  <div class="grid-2" style="margin-top:24px;">
-    <div class="card roomy">
-      <h3>資金計画（概要）</h3>
-      <ul>
-        <li><strong>資金の調達方法：</strong>市補助金 など</li>
-        <li><strong>予算・資金源：</strong>市補助金・協賛金・出店料 等</li>
-        <li><strong>主な使用用途：</strong>会場設営費・警備費・保険・清掃・広報 等</li>
-      </ul>
-    </div>
-
-    <div class="card roomy">
-      <h3>運営体制・人数・影響</h3>
-      <ul>
-        <li><strong>スタッフ / ボランティア：</strong>正式な人数の計測は未実施。地域の協力とボランティアにより支えられています。</li>
-        <li><strong>来場者数（推定）：</strong>令和7年度は <strong>7,500人</strong></li>
-        <li><strong>地域への影響：</strong>武蔵寺の「長者の藤」の見頃も追い風となり、観光消費の拡大に寄与。</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
+    <!-- ===== 経済・運営（How much） ===== -->
+    <section id="howmuch" class="container reveal">
+      <h2 class="section-title">経済・運営（How much）</h2>
+         <div class="card" style="padding:20px; margin-top:24px;">
+        <h3>資金と費用について</h3>
+        <p>
+          新嘗祭の開催に必要な資金は、特別な協賛や補助金ではなく、日常的に神社に寄せられる収入から捻出されます。
+          主な財源は次のとおりです。
+        </p>
+        <ul>
+          <li>通常の御祈祷料</li>
+          <li>参拝者からの賽銭</li>
+          <li>出張祭典の謝礼</li>
+          <li>結婚式・葬儀など各種儀式に伴う社入金</li>
+        </ul>
+      </div>
+    
+      <!-- 🟣 ここから左右並列レイアウト -->
+      <div class="grid-2" style="margin-top:24px;">
+        <div class="card roomy">
+          <h3>運営の特徴</h3>
+          <p>
+            新嘗祭は神事中心の厳粛な祭典で、特別な仮設設備や派手な演出を必要としません。
+            普段から備わる神社施設で滞りなく斎行され、参列者も基本的には氏子総代会に限られるため、
+            必要経費はごく限られています。観光目的の大規模行事と比べると、
+            費目や支出規模が少なく、質素で効率的なのが特徴です。
+          </p>
+        </div>
+    
+        <div class="card roomy">
+          <h3>総費用の目安</h3>
+          <p>
+            全体として、新嘗祭にかかる費用の総額はおよそ20万円前後。
+            神社の年間行事の中でも比較的負担の小さい祭祀に位置付けられます。
+            限られた資金の中で神事を維持し、古来の伝統を継承している点に、
+            新嘗祭の文化的意義と神社運営の工夫が表れています。
+          </p>
+        </div>
+      </div>
+    </section>
+    
 
   </main>
 
   <footer class="container">
     <div class="footer-links">
+      <!-- お問合せ（假链接） -->
       <a href="javascript:void(0)">お問合せ</a>
+      <!-- 取材内容（采访内容） -->
       <a href="#interview">取材内容</a>
+      <!-- このサイトについて（关于本站） -->
       <a href="#about">このサイトについて</a>
     </div>
-    <small>© 2025 筑紫野市 藤まつり デジタルアーカイブ</small>
+    <small>© 2025 香椎宮 新嘗祭 デジタルアーカイブ</small>
   </footer>
+  
 
-  <div class="bottom-nav" aria-hidden="false">
-    <div class="wrap">
-      <a href="#what">What</a>
-      <a href="#who">Who</a>
-      <a href="#when">When</a>
-      <a href="#where">Where</a>
-      <a href="#why">Why</a>
-      <a href="#how">How</a>
-      <a href="#howmuch">How much</a>
-    </div>
+  <!-- ===== モバイル下部ナビ（主要項目ショートカット） ===== -->
+<div class="bottom-nav" aria-hidden="false">
+  <div class="wrap">
+    <a href="#what">What</a>
+    <a href="#who">Who</a>
+    <a href="#when">When</a>
+    <a href="#where">Where</a>
+    <a href="#why">Why</a>
+    <a href="#how">How</a>
+    <a href="#howmuch">How much</a>
   </div>
+</div>
 
-  <!-- JS -->
+  <!-- ===== JS ===== -->
   <script>
+    // モバイルドロワー
     function toggleDrawer(force){
       const el = document.getElementById('drawer');
       const open = force!==undefined ? force : !el.classList.contains('open');
@@ -555,24 +547,86 @@
       el.setAttribute('aria-hidden', String(!open));
     }
 
+    // スクロール表示アニメーション
     const io = new IntersectionObserver((entries)=>{
       entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('show'); })
     }, {threshold: .15});
     document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
 
+    // 簡易ライトボックス
+    const dlg = document.getElementById('lightbox');
+    const img = document.getElementById('lb-img');
+    document.querySelectorAll('.thumb').forEach(t=>{
+      t.addEventListener('click', (e)=>{
+        e.preventDefault();
+        img.src = t.dataset.img;
+        if(typeof dlg.showModal === 'function'){ dlg.showModal(); }
+      });
+    });
+    function closeLightbox(){ dlg.close(); }
+
+    // アンカー遷移をスムーズに
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        const id = a.getAttribute('href').slice(1);
+        const target = document.getElementById(id);
+        if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth', block:'start'}); }
+      });
+    });
+  </script>
+  <script>
+    // What 部分：缩略图 -> LightBox
     (function(){
       const dlg = document.getElementById('lb-what');
       const img = document.getElementById('lb-what-img');
-      document.querySelectorAll('.what-thumb, .who-thumb, .when-thumb').forEach(a=>{
+      document.querySelectorAll('.what-thumb').forEach(a=>{
         a.addEventListener('click', (e)=>{
           e.preventDefault();
           const full = a.getAttribute('data-full');
-          if(full){ img.src = full; dlg.showModal(); }
+          if(full){
+            img.src = full;
+            if(typeof dlg.showModal === 'function'){ dlg.showModal(); }
+          }
         });
       });
     })();
-    document.getElementById('when')?.classList.add('show');
   </script>
 
+<script>
+  // Who 部分：缩略图 -> 复用极简 LightBox
+  (function(){
+    const dlg = document.getElementById('lb-what');     // 复用已有的 barebox
+    const img = document.getElementById('lb-what-img'); // 复用已有的大图容器
+    document.querySelectorAll('.who-thumb').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        e.preventDefault();
+        const full = a.getAttribute('data-full');
+        if(full){
+          img.src = full;
+          if(typeof dlg.showModal === 'function'){ dlg.showModal(); }
+        }
+      });
+    });
+  })();
+</script>
+<script>
+  // When 部分：缩略图 -> 复用极简 LightBox
+  (function(){
+    const dlg = document.getElementById('lb-what');     // 复用已有的 barebox
+    const img = document.getElementById('lb-what-img'); // 复用已有的大图容器
+    document.querySelectorAll('.when-thumb').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        e.preventDefault();
+        const full = a.getAttribute('data-full');
+        if(full){
+          img.src = full;
+          if(typeof dlg.showModal === 'function'){ dlg.showModal(); }
+        }
+      });
+    });
+  })();
+</script>
+
+  
 </body>
 </html>
