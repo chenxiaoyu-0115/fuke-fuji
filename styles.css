@@ -628,3 +628,12 @@ nav a:hover{background:rgba(216,200,234,.25) !important;}
   height: 100%;
   object-fit: cover;
 }
+/* ===== 脚注风来源标注 ===== */
+.source-note {
+  font-size: 13px;            /* 比正文更小 */
+  color: #6b7280;             /* 灰色，更低调 */
+  line-height: 1.6;           /* 舒适的阅读高度 */
+  margin: 8px 0 12px;         /* 上下留白更自然 */
+  font-style: italic;         /* 略微斜体，像脚注 */
+  display: block;
+}
